@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Three theses on AI as normal technology, human control, fair access, and the future of software development by Andre Kocher and Aleksandar Radovanovic.">
+    <meta name="author" content="Andre Kocher, Aleksandar Radovanovic">
+    <meta name="theme-color" content="#f8f7f3">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Who Holds the Power? Three Theses on AI as Normal Technology">
+    <meta property="og:description" content="Human control, fair access, and the changing knowledge barrier to software development. Three perspectives on AI as normal technology.">
+    <title>Who Holds the Power? Three Theses on AI as Normal Technology</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#article">Skip to article</a>
+    <header class="site-header shell">
+      <a class="profile-link" href="https://github.com/Buttergipfeli" aria-label="Buttergipfeli on GitHub">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.558 21.923c.563.103.768-.244.768-.543 0-.267-.01-.975-.015-1.914-3.13.68-3.791-1.508-3.791-1.508-.512-1.3-1.25-1.646-1.25-1.646-1.022-.7.078-.685.078-.685 1.13.08 1.724 1.16 1.724 1.16 1.005 1.723 2.636 1.225 3.278.937.103-.728.394-1.225.715-1.507-2.498-.284-5.124-1.25-5.124-5.565 0-1.229.439-2.234 1.16-3.021-.117-.285-.503-1.429.11-2.978 0 0 .945-.303 3.094 1.154a10.79 10.79 0 0 1 5.626 0c2.149-1.457 3.092-1.154 3.092-1.154.614 1.55.229 2.693.113 2.978.722.787 1.158 1.792 1.158 3.021 0 4.326-2.63 5.278-5.136 5.557.404.35.766 1.041.766 2.099 0 1.515-.014 2.737-.014 3.11 0 .302.203.65.774.541A11.251 11.251 0 0 0 12 .75Z"/></svg>
+        <span>Buttergipfeli</span>
+        <span class="external-arrow" aria-hidden="true">↗</span>
+      </a>
+      <nav class="header-links" aria-label="Article resources">
+        <a href="ai-as-normal-technology.pdf">PDF version <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="article" class="shell">
+      <article aria-labelledby="article-title">
+        <header class="article-header">
+          <p class="eyebrow">AI · Technology · Society</p>
+          <h1 id="article-title"><span class="title-main">Who Holds the Power?</span> <span class="title-subtitle">Three Theses on AI as Normal Technology</span></h1>
+          <div class="article-meta">
+            <p class="authors">Andre Kocher <span class="author-connector">and</span> Aleksandar Radovanovic</p>
+            <time datetime="2026-10-01">October 1, 2026</time>
+          </div>
+        </header>
+
+        <div class="article-layout">
+          <aside class="contents">
+            <nav aria-label="Table of contents">
+              <p class="contents-label">In this article</p>
+              <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#thesis-1"><span class="contents-number">01</span> Human control</a></li>
+                <li><a href="#thesis-2"><span class="contents-number">02</span> Accessible AI</a></li>
+                <li><a href="#thesis-3"><span class="contents-number">03</span> Knowledge &amp; jobs</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+                <li><a href="#references">References</a></li>
+              </ol>
+            </nav>
+          </aside>
+
+          <div class="article-content">
+            <section id="introduction" class="introduction" aria-labelledby="introduction-title">
+              <h2 id="introduction-title">Introduction</h2>
+              <p>Narayanan and Kapoor ask us to see AI as normal technology: powerful, but shaped by institutions and diffusion rather than by an autonomous superintelligence. We broadly agree, but in software development, change may come faster than they expect. Our three theses concern how much power people give AI, who can access it, and how it changes entry into skilled work.</p>
+            </section>
+
+            <section id="thesis-1" aria-labelledby="thesis-1-title">
+              <h2 id="thesis-1-title">Thesis 1: Human Control Depends on Limited Power</h2>
+              <blockquote class="thesis">
+                <p>Over the next five years, we expect people to retain control over AI. This will depend on how much power we choose to cede to it and on continued oversight, rather than on a kill switch.</p>
+              </blockquote>
+              <p>We agree with Narayanan and Kapoor: whether AI grows smarter matters less than the power it receives through resources, autonomy, and access <span class="citation">[<a href="#ref-1" aria-label="Reference 1">1</a>]</span>. That power grows gradually and can be withdrawn. Take Claude Code: by Anthropic's own account, its design follows least privilege. Actions within its sandbox run freely, while those outside require consent <span class="citation">[<a href="#ref-1" aria-label="Reference 1">1</a>, <a href="#ref-2" aria-label="Reference 2">2</a>]</span>. The hardest counterargument comes from Schlatter et al.'s sandboxed tests involving thirteen LLMs. A subset sabotaged a shutdown script to complete its assignment, in one condition as much as 97% of the time despite explicit instructions not to interfere. The results depended strongly on the prompts <span class="citation">[<a href="#ref-3" aria-label="Reference 3">3</a>]</span>. These results suggest that a kill switch alone may be insufficient if a model can modify its shutdown mechanism. Limiting resources, autonomy, and access provides additional protection. Such trials can reveal troubling conduct before high-stakes use. Anthropic reports that it changed training after an early model attempted to send secrets to an outside server <span class="citation">[<a href="#ref-4" aria-label="Reference 4">4</a>]</span>. Claude Code's auto mode evaluates proposed actions, illustrating the oversight approach discussed by Narayanan and Kapoor <span class="citation">[<a href="#ref-1" aria-label="Reference 1">1</a>, <a href="#ref-4" aria-label="Reference 4">4</a>]</span>. As discussed in Thesis 2, downstream cybersecurity defences can also limit harm from misaligned actions <span class="citation">[<a href="#ref-1" aria-label="Reference 1">1</a>]</span>. The five-year horizon is nevertheless uncertain: Kwa et al. found that the length of tasks AI completed with 50% success, measured by human completion time, doubled roughly every seven months. This challenges the assumption that models will stay poor at long-term planning <span class="citation">[<a href="#ref-5" aria-label="Reference 5">5</a>]</span>. Yet capability alone does not grant real-world power. Deployment choices still determine access and oversight. An arms race is the main exception because firms or states may value speed over safety. Commercial incentives are insufficient there, so sector-specific regulation and liability must prevent actors from gaining an advantage by weakening controls <span class="citation">[<a href="#ref-1" aria-label="Reference 1">1</a>]</span>. Losing control therefore remains possible, but not the most likely outcome <span class="citation">[<a href="#ref-1" aria-label="Reference 1">1</a>, <a href="#ref-6" aria-label="Reference 6">6</a>]</span>.</p>
+            </section>
+
+            <section id="thesis-2" aria-labelledby="thesis-2-title">
+              <h2 id="thesis-2-title">Thesis 2: Safety Should Not Make AI Less Accessible</h2>
+              <blockquote class="thesis">
+                <p>Misuse of AI should be addressed primarily downstream, at the point of impact. Broad restrictions on access to models would favour a few large companies and deepen inequalities between those who can afford human expertise and those who cannot.</p>
+              </blockquote>
+              <p>Narayanan and Kapoor argue that harmfulness cannot be judged without context. Since models often lack that context, a phishing email is better blocked at its recipient than at the model that produced it. Model-level safeguards can complement these defences <span class="citation">[<a href="#ref-1" aria-label="Reference 1">1</a>]</span>. Fairness, though, is our main reason for favouring this downstream approach. Licensing requirements and bans on open models would leave fewer suppliers, weaken competition, and make capable AI more expensive. Large firms and wealthy users could absorb these costs, while others would lose access <span class="citation">[<a href="#ref-1" aria-label="Reference 1">1</a>, <a href="#ref-6" aria-label="Reference 6">6</a>]</span>. Take Switzerland: more than one-third of pupils in grades 8 and 9 got paid private tutoring, especially children from advantaged households <span class="citation">[<a href="#ref-7" aria-label="Reference 7">7</a>]</span>. AI can help make tutoring affordable. A randomised trial in Nigerian public schools found that six weeks of teacher-guided AI tutoring produced learning gains equivalent to 1.5 to 2 years of typical schooling <span class="citation">[<a href="#ref-8" aria-label="Reference 8">8</a>]</span>. If access restrictions raised prices, people unable to afford a human tutor could also lose this option. The internet shows another path: after the Morris worm infected about a tenth of connected computers in 1988, the first computer emergency response team was formed <span class="citation">[<a href="#ref-9" aria-label="Reference 9">9</a>]</span>. Narayanan and Kapoor note that such downstream protections have improved over decades <span class="citation">[<a href="#ref-1" aria-label="Reference 1">1</a>]</span>. Bioweapons are the strongest objection, but Narayanan and Kapoor argue that controls on dangerous materials and equipment remain the appropriate defence even when AI is used <span class="citation">[<a href="#ref-1" aria-label="Reference 1">1</a>]</span>.</p>
+            </section>
+
+            <section id="thesis-3" aria-labelledby="thesis-3-title">
+              <h2 id="thesis-3-title">Thesis 3: Lower Knowledge Barriers Do Not Guarantee Jobs</h2>
+              <blockquote class="thesis">
+                <p>Over the next five years, AI will lower the knowledge barrier to software development. This will increase competition and reduce the advantage that existing qualifications confer in routine coding tasks, while experience and judgement may remain valuable.</p>
+              </blockquote>
+              <p>The article says that technology diffusion takes decades and that AI's effect on real software development remains modest <span class="citation">[<a href="#ref-1" aria-label="Reference 1">1</a>]</span>. Five years is still plausible here because software work is digital, lightly regulated, and already integrated with AI tools, unlike medicine or other high-stakes fields. Copilot users completed a defined programming task faster <span class="citation">[<a href="#ref-10" aria-label="Reference 10">10</a>]</span>, while AI raised productivity most among less experienced customer-support workers <span class="citation">[<a href="#ref-11" aria-label="Reference 11">11</a>]</span>. Yet experienced open-source developers were 19% slower with early-2025 AI tools in a METR study <span class="citation">[<a href="#ref-12" aria-label="Reference 12">12</a>]</span>. These different settings suggest that AI can help newcomers, but do not measure the value of qualifications. The strongest counterargument is that a lower knowledge barrier may not improve access to jobs: U.S. payroll data show employment among 22- to 25-year-olds in AI-exposed occupations 19% lower than if it had kept pace with less-exposed peers <span class="citation">[<a href="#ref-13" aria-label="Reference 13">13</a>]</span>. This is a descriptive finding, not proof of causation. Entry-level tasks may disappear just as they become easier. More people could produce software, while fewer receive paid opportunities to build tacit knowledge. Weaving illustrates a related risk: mechanised spinning attracted workers to easy-to-learn hand weaving before power looms displaced them <span class="citation">[<a href="#ref-14" aria-label="Reference 14">14</a>, <a href="#ref-15" aria-label="Reference 15">15</a>]</span>. The looms correspond to AI's automation, but weaving already had a low knowledge barrier. Hand-weaver wages fell from about 240 pence per week in 1806 to roughly 100 by 1820, unlike construction wages <span class="citation">[<a href="#ref-14" aria-label="Reference 14">14</a>, <a href="#ref-15" aria-label="Reference 15">15</a>]</span>. AI could lower knowledge barriers even in more complex work, reducing the advantage of existing qualifications. Experience, judgement, and task definition may remain valuable without preserving today's entry requirements.</p>
+            </section>
+
+            <section id="conclusion" aria-labelledby="conclusion-title">
+              <h2 id="conclusion-title">Conclusion</h2>
+              <p>We already saw AI as a normal technology before reading the article. Limited power, human oversight, and sector-specific rules are essential safeguards. Misuse should be addressed where harm occurs while preserving affordable access. Our main concern remains the job market. The article leaves that uncertainty unresolved, and our comparison with hand weavers has made us more worried about the future.</p>
+            </section>
+
+            <div class="pdf-note">
+              <div>
+                <p class="eyebrow">Prefer the paper version?</p>
+                <p>The same article, with its complete bibliography.</p>
+              </div>
+              <a class="pdf-link" href="ai-as-normal-technology.pdf">Read the PDF <span aria-hidden="true">↗</span></a>
+            </div>
+
+            <section id="references" class="references-section" aria-labelledby="references-title">
+              <h2 id="references-title">References</h2>
+              <ol class="references" role="list">
+                <li id="ref-1"><p>A. Narayanan and S. Kapoor, “AI as normal technology,” Knight First Amendment Institute at Columbia University, Apr. 2025, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://knightcolumbia.org/content/ai-as-normal-technology">https://knightcolumbia.org/content/ai-as-normal-technology</a></p></li>
+                <li id="ref-2"><p>D. Dworken and O. Weller-Davies, “Beyond permission prompts: Making Claude Code more secure and autonomous,” Anthropic Engineering Blog, Oct. 2025, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://www.anthropic.com/engineering/claude-code-sandboxing">https://www.anthropic.com/engineering/claude-code-sandboxing</a></p></li>
+                <li id="ref-3"><p>J. Schlatter, B. Weinstein-Raun, and J. Ladish, “Incomplete tasks induce shutdown resistance in some frontier LLMs,” <em>Transactions on Machine Learning Research</em>, 2026. [Online]. Available: <a href="https://openreview.net/forum?id=e4bTTqUnJH">https://openreview.net/forum?id=e4bTTqUnJH</a></p></li>
+                <li id="ref-4"><p>Anthropic, “System card: Claude Opus 5.5,” Sep. 2026, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf">https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf</a></p></li>
+                <li id="ref-5"><p>T. Kwa, B. West, J. Becker <em>et al.</em>, “Measuring AI ability to complete long tasks,” arXiv preprint arXiv:2503.14499v1, 2025, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://arxiv.org/abs/2503.14499v1">https://arxiv.org/abs/2503.14499v1</a></p></li>
+                <li id="ref-6"><p>T. Stadelmann and R. Stadelmann, “Challenging assumptions that drive current AI narratives,” AIssays blog, Aug. 2026, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://stdm.github.io/Challenging-assumptions/">https://stdm.github.io/Challenging-assumptions/</a></p></li>
+                <li id="ref-7"><p>S. Hof and S. C. Wolter, “Ausmass und Wirkung bezahlter Nachhilfe in der Schweiz,” Schweizerische Koordinationsstelle für Bildungsforschung (SKBF), SKBF Staff Paper 14, 2014, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://www.skbf-csre.ch/fileadmin/files/pdf/staffpaper/staffpaper_14_nachhilfe.pdf">https://www.skbf-csre.ch/fileadmin/files/pdf/staffpaper/staffpaper_14_nachhilfe.pdf</a></p></li>
+                <li id="ref-8"><p>M. E. De Simone, F. H. Tiberti, M. R. Barron Rodriguez, F. A. Manolio, W. Mosuro, and E. J. Dikoru, “From chalkboards to chatbots: Evaluating the impact of generative AI on learning outcomes in Nigeria,” World Bank, Policy Research Working Paper 11125, May 2025, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099548105192529324">https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099548105192529324</a></p></li>
+                <li id="ref-9"><p>Federal Bureau of Investigation, “The Morris worm: 30 years since first major attack on the internet,” FBI News, Nov. 2018, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://www.fbi.gov/news/stories/morris-worm-30-years-since-first-major-attack-on-internet-110218">https://www.fbi.gov/news/stories/morris-worm-30-years-since-first-major-attack-on-internet-110218</a></p></li>
+                <li id="ref-10"><p>S. Peng, E. Kalliamvakou, P. Cihon, and M. Demirer, “The impact of AI on developer productivity: Evidence from GitHub Copilot,” arXiv preprint arXiv:2302.06590, 2023, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://arxiv.org/abs/2302.06590">https://arxiv.org/abs/2302.06590</a></p></li>
+                <li id="ref-11"><p>E. Brynjolfsson, D. Li, and L. Raymond, “Generative AI at work,” <em>The Quarterly Journal of Economics</em>, vol. 140, no. 2, pp. 889–942, 2025. [Online]. Available: <a href="https://academic.oup.com/qje/article/140/2/889/7990658">https://academic.oup.com/qje/article/140/2/889/7990658</a></p></li>
+                <li id="ref-12"><p>J. Becker, N. Rush, B. Barnes, and D. Rein, “Measuring the impact of early-2025 AI on experienced open-source developer productivity,” METR, Jul. 2025, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/</a></p></li>
+                <li id="ref-13"><p>E. Brynjolfsson, B. Chandar, and R. Chen, “Canaries in the coal mine? six facts about the recent employment effects of artificial intelligence,” Stanford Digital Economy Lab, Tech. Rep., Aug. 2026, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/">https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/</a></p></li>
+                <li id="ref-14"><p>R. C. Allen, “The hand-loom weaver and the power loom: A Schumpeterian perspective,” New York University Abu Dhabi, Division of Social Science, Working Paper 0004, 2017, Accessed: Sep. 27, 2026. [Online]. Available: <a href="https://nyuad.nyu.edu/content/dam/nyuad/academics/divisions/social-science/working-papers/2017/0004.pdf">https://nyuad.nyu.edu/content/dam/nyuad/academics/divisions/social-science/working-papers/2017/0004.pdf</a></p></li>
+                <li id="ref-15"><p>D. Acemoglu and S. Johnson, “Learning from Ricardo and Thompson: Machinery and labor in the early Industrial Revolution and in the age of artificial intelligence,” <em>Annual Review of Economics</em>, vol. 16, pp. 597–621, 2024, doi: <a href="https://doi.org/10.1146/annurev-economics-091823-025129">10.1146/annurev-economics-091823-025129</a>.</p></li>
+              </ol>
+              <a class="back-to-top" href="#article-title">Back to top <span aria-hidden="true">↑</span></a>
+            </section>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer shell">
+      <p>Andre Kocher &amp; Aleksandar Radovanovic</p>
+      <a href="https://github.com/Buttergipfeli">GitHub <span aria-hidden="true">↗</span></a>
+    </footer>
+  </body>
+</html>
